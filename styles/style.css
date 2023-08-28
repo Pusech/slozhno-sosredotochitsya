@@ -8,6 +8,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   z-index: -1;
+
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
@@ -16,19 +17,35 @@
   position: relative;
   grid-template-rows: 0.4fr 0.9fr 1fr 1fr 0.3fr;
   grid-template-rows: 0.35fr 0.85fr 0.9fr 0.9fr 0.3fr;
+  grid-template-rows: 1.33fr 0.33fr 1.33fr;
+  align-items: center;
   height: 100vh;
   padding: 10px;
 }
-/* .header::after {
+.header::after {
   display: block;
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--header-color);
+  border-left: 1px solid var(--header-color);
   content: "";
-  position: relative;
+  position: absolute;
   align-self: end;
-} */
+  margin: 10px;
+}
+
+.header::before {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--header-color);
+  border-right: 1px solid var(--header-color);
+  content: "";
+  position: absolute;
+  align-self: start;
+  justify-self: end;
+  margin: 10px;
+}
 
 /* .decorated-zone::before {
   display: block;
@@ -41,25 +58,28 @@
   justify-self: end;
 } */
 
-/* .header-rec {
-  display: inline;
-  color: #ff0070;
+.header-rec {
+  display: block;
+  color: var(--accent-color);
   text-transform: uppercase;
   position: absolute;
   top: 10px;
-  right: 20px;
+  right: 39px;
+  font-size: 18px;
 }
 
 .header-rec::after {
   content: "";
   display: inline-block;
+  position: absolute;
   filter: drop-shadow(0px 0px 4px var(--accent-color));
   width: 9px;
   height: 9px;
   background-color: var(--accent-color);
   border-radius: 10px;
-  margin-inline-start: 10px;
-} */
+  margin-inline-start: 11px;
+  margin-top: 8px;
+}
 
 .header__theme-menu-list {
   display: grid;
@@ -70,20 +90,20 @@
 .header__theme-menu-button {
   background: none;
   border: none;
-  color: var(--accent-color);
+  color: var(--header-color);
   text-transform: lowercase;
-  color: #ff0070;
   font-family: IBM Plex Mono;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px; /* 100% */
-  padding: 0 13px;
+  line-height: 18px;
+  padding: 1.5px 13px 4px;
+  min-height: 23px;
 }
 
 .cover__title {
-  color: #db00ff;
-  text-shadow: 4px 4px 0px #ff0070;
+  color: var(--title-color);
+  text-shadow: 4px 4px 0px var(--accent-color);
   font-family: IBM Plex Mono;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-style: normal;
@@ -94,7 +114,7 @@
 
 /* text_desc */
 .title__decor {
-  color: #000028;
+  color: var(--heading-font);
   font-family: var(--main-font);
   font-size: 18px;
   font-style: normal;
@@ -102,7 +122,7 @@
   line-height: 23.4px; /* 130% */
   background-color: var(--accent-color);
   padding-right: 10px;
-  align-self: end;
+  /* align-self: end; */
 }
 
 /* Content */
@@ -110,13 +130,13 @@
 .full-content {
   display: grid;
   gap: 50px;
-  background-color: #000028;
+  background-color: var(--background-color);
   /* нужно адаптировать пиксели */
 }
 
 .content {
   display: grid;
-  background-color: #000028;
+  background-color: var(--background-color);
   padding-left: 10px;
   padding-right: 10px;
   gap: 20px;
@@ -137,8 +157,8 @@
 }
 
 .content__title {
-  color: #ff0070;
-  font-family: IBM Plex Mono;
+  color: var(--header-color);
+  font-family: var(--main-font);
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -146,8 +166,8 @@
 }
 
 .content__desc {
-  color: #f1b2ce;
-  font-family: IBM Plex Mono;
+  color: var(--font-color);
+  font-family: var(--main-font);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -155,8 +175,8 @@
 }
 
 .section3_desc {
-  color: #000028;
-  font-family: IBM Plex Mono;
+  color: var(--heading-font);
+  font-family: var(--main-font);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -169,6 +189,11 @@
   /* ДРУГОЙ ШРИФТ */
 }
 
+a {
+  text-decoration: none;
+  text-shadow: var(--link-shadow) 1px 1px;
+}
+
 /* ГАЛЛЕРЕЯ */
 
 .gallery {
@@ -178,7 +203,7 @@
 }
 
 .gallery__desc {
-  color: #000028;
+  color: var(--heading-font);
   font-family: var(--main-font);
   font-size: 18px;
   font-style: normal;
@@ -196,7 +221,7 @@
   grid-column-gap: 0;
   grid-row-gap: 10px;
   padding: 0 0 40px;
-  background-color: #000028;
+  background-color: var(--background-color);
 }
 
 @media (min-width: 720px) {
@@ -257,15 +282,15 @@
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
-  min-height: 100vh;
-  background-color: #000028;
+  height: 100vh;
+  background-color: var(--background-color);
   padding: 10px;
 }
 
 .footer__title {
-  color: #db00ff;
-  text-shadow: 2px 2px 0px #ff0070;
-  font-family: IBM Plex Mono;
+  color: var(--title-color);
+  text-shadow: 2px 2px 0px var(--title-shadow);
+  font-family: var(--main-font);
   font-size: 116px;
   font-style: normal;
   font-weight: 700;
@@ -274,22 +299,48 @@
   align-self: center;
 }
 
-/* .footer::after {
+.footer::after {
   display: block;
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--header-color);
+  border-left: 1px solid var(--header-color);
   content: "";
-  position: relative;
+  position: absolute;
   align-self: end;
-} */
+  /* margin: 10px; */
+}
+
+.footer::before {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--header-color);
+  border-right: 1px solid var(--header-color);
+  content: "";
+  position: absolute;
+  align-self: start;
+  justify-self: end;
+}
 
 @media (width>=768px) {
   .header {
     display: grid;
     padding: 20px;
     grid-template-rows: 0.33fr 1fr 1fr 1fr 0.33fr;
+    grid-template-rows: 1.33fr 0.33fr 1.33fr;
+  }
+
+  .header::after {
+    margin: 20px;
+  }
+
+  .header::before {
+    margin: 20px;
+  }
+
+  .header-rec {
+    margin: 10px;
   }
 
   .cover__title {
@@ -339,6 +390,17 @@
     padding: 20px;
     gap: 20px;
   }
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .footer::before {
+    margin: 10px;
+  }
+
+  .footer::after {
+    margin: 10px;
+  }
 }
 
 @media (width>=1024px) {
@@ -377,6 +439,7 @@
 
   .header {
     grid-template-rows: 0.2fr 1fr 1fr 1fr 0.2fr;
+    grid-template-rows: 1.3fr 0.5fr 1.3fr;
   }
 
   .content__lowers {
