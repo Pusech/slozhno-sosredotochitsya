@@ -15,25 +15,22 @@
   display: grid;
   position: relative;
   grid-template-rows: 0.4fr 0.9fr 1fr 1fr 0.3fr;
-  /* padding-bottom: 65px; */
+  grid-template-rows: 0.35fr 0.85fr 0.9fr 0.9fr 0.3fr;
   height: 100vh;
   padding: 10px;
-  /* падинг или марджин хз? */
 }
-.header::after {
+/* .header::after {
   display: block;
   width: 25px;
   height: 25px;
   border-bottom: 1px solid var(--accent-color);
   border-left: 1px solid var(--accent-color);
   content: "";
-  /* position: absolute;
-  bottom: 10px; */
   position: relative;
   align-self: end;
-}
+} */
 
-.decorated-zone::before {
+/* .decorated-zone::before {
   display: block;
   width: 25px;
   height: 25px;
@@ -42,9 +39,9 @@
   content: "";
   position: relative;
   justify-self: end;
-}
+} */
 
-.header-rec {
+/* .header-rec {
   display: inline;
   color: #ff0070;
   text-transform: uppercase;
@@ -62,11 +59,7 @@
   background-color: var(--accent-color);
   border-radius: 10px;
   margin-inline-start: 10px;
-}
-
-.header__theme-menu {
-  /* align-self: center; */
-}
+} */
 
 .header__theme-menu-list {
   display: grid;
@@ -85,7 +78,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: 18px; /* 100% */
-  /* font-family: var(--main-font); */
   padding: 0 13px;
 }
 
@@ -100,10 +92,8 @@
   align-self: center;
 }
 
-/* !!!!!!!!!!!!!!!!! просто сделай надпись по центру !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-
 /* text_desc */
-.description {
+.title__decor {
   color: #000028;
   font-family: var(--main-font);
   font-size: 18px;
@@ -112,12 +102,7 @@
   line-height: 23.4px; /* 130% */
   background-color: var(--accent-color);
   padding-right: 10px;
-  /* height: fit-content; */
   align-self: end;
-  margin-top: 10px;
-}
-
-.cover_desc {
 }
 
 /* Content */
@@ -131,11 +116,20 @@
 
 .content {
   display: grid;
-  /* padding-top: 50px; */
   background-color: #000028;
   padding-left: 10px;
   padding-right: 10px;
+  gap: 20px;
+}
+
+.card {
+  display: grid;
   gap: 10px;
+}
+
+.card__wrapper {
+  display: grid;
+  gap: 20px;
 }
 
 .content:first-child {
@@ -149,7 +143,6 @@
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px; /* 130% */
-  /* margin-bottom: 10px; */
 }
 
 .content__desc {
@@ -169,14 +162,19 @@
   font-weight: 400;
   line-height: 23.4px; /* 130% */
   background-color: var(--accent-color);
-  margin-top: 10px;
+}
+
+.advice-title {
+  margin-bottom: 10px;
+  /* ДРУГОЙ ШРИФТ */
 }
 
 /* ГАЛЛЕРЕЯ */
 
 .gallery {
-  /* display: grid;
-  gap: 10px; */
+  display: grid;
+  padding: 0 10px;
+  gap: 10px;
 }
 
 .gallery__desc {
@@ -205,7 +203,8 @@
   .gallery__images {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1.3fr 0.7fr 1fr;
+    grid-template-rows: 0.7fr 1fr 1fr 0.3fr;
+    /* grid-template-rows: 0.35fr 0.85fr 0.9fr 0.9fr 0.3fr; */
     gap: 20px 20px;
     grid-template-areas:
       "image1 image1 image2"
@@ -248,7 +247,6 @@
 
 .gallery-img {
   max-width: 100%;
-  /* max-height: 100%; */
   display: block;
   object-fit: cover;
 }
@@ -257,20 +255,12 @@
 
 .footer {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   grid-template-columns: 1fr;
   min-height: 100vh;
   background-color: #000028;
   padding: 10px;
 }
-
-/* .title__wrapper {
-  position: relative;
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .footer__title {
   color: #db00ff;
@@ -284,7 +274,7 @@
   align-self: center;
 }
 
-.footer::after {
+/* .footer::after {
   display: block;
   width: 25px;
   height: 25px;
@@ -293,4 +283,116 @@
   content: "";
   position: relative;
   align-self: end;
+} */
+
+@media (width>=768px) {
+  .header {
+    display: grid;
+    padding: 20px;
+    grid-template-rows: 0.33fr 1fr 1fr 1fr 0.33fr;
+  }
+
+  .cover__title {
+    /* font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); */
+    margin-left: -20px;
+  }
+
+  .cover_desc {
+    align-self: center;
+    max-width: 365px;
+    justify-self: end;
+  }
+
+  .header__theme-menu {
+    align-self: center;
+  }
+
+  .full-content {
+    gap: 40px;
+  }
+  .content:first-child {
+    padding-top: 60px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .content__difficulty {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+  }
+
+  .content__title {
+    max-width: 236px;
+  }
+
+  .content__advice {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+  }
+  .card {
+    grid-column: 2 / -1;
+  }
+
+  .gallery {
+    padding: 20px;
+    gap: 20px;
+  }
+}
+
+@media (width>=1024px) {
+  .header__theme-menu {
+    grid-row: 1;
+    width: 100%;
+    align-self: start;
+  }
+  .header__theme-menu-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cover__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .cover_desc {
+    padding: 0;
+    max-width: 491px;
+  }
+
+  .content__title {
+    max-width: 365px;
+    /* grid-row: 1 / span 2; */
+  }
+
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .content__difficulty {
+    row-gap: 20px;
+    column-gap: 10px;
+  }
+
+  .header {
+    grid-template-rows: 0.2fr 1fr 1fr 1fr 0.2fr;
+  }
+
+  .content__lowers {
+  }
+  .card {
+    flex: 1 1 0px;
+  }
+
+  .card__wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: start;
+  }
+
+  .content__advice {
+    row-gap: 20px;
+    column-gap: 10px;
+  }
 }
