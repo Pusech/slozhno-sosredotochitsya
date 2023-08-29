@@ -21,3 +21,7 @@
 .theme_dark .header-rec {
   display: block;
 }
+
+.theme_dark .header__theme-menu-button_type_dark {
+  border: 1px solid var(--header-color);
+}

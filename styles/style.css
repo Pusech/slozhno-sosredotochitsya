@@ -101,6 +101,16 @@
   min-height: 23px;
 }
 
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-bottom: 1px solid var(--header-color);
+}
+
+.header__theme-menu-button:hover {
+  /* border: 1px solid white; */
+  outline: 1px solid var(--header-color);
+}
+
 .cover__title {
   color: var(--title-color);
   text-shadow: 4px 4px 0px var(--accent-color);
@@ -192,6 +202,18 @@
 a {
   text-decoration: none;
   text-shadow: var(--link-shadow) 1px 1px;
+}
+
+a:hover {
+  text-decoration: none;
+  /* text-decoration: underline; */
+  outline: none;
+  border-bottom: 1px solid var(--font-color);
+}
+
+a:focus-visible {
+  outline: none;
+  border: 1px solid var(--font-color);
 }
 
 /* ГАЛЛЕРЕЯ */
@@ -442,8 +464,6 @@ a {
     grid-template-rows: 1.3fr 0.5fr 1.3fr;
   }
 
-  .content__lowers {
-  }
   .card {
     flex: 1 1 0px;
   }
