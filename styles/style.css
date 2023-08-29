@@ -6,7 +6,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  z-index: -1;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
