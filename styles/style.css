@@ -506,7 +506,7 @@ a:focus-visible {
     display: none;
   }
 
-  .header__theme-menu-button_type_light {
+  /* .header__theme-menu-button_type_light {
     border: 1px solid var(--header-color);
-  }
+  } */
 }
