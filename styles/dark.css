@@ -18,14 +18,7 @@
   --title-shadow: #ff0070;
   --link-shadow: #ff0070;
   --header-color: #ff0070;
-
-  font-family: var(--main-font);
-  background-image: url("/images/cover-image-dark.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  z-index: -1;
+  --cover-image: url(../images/cover-image-dark.png);
 }
 
 .theme_dark .header-rec {
@@ -34,4 +27,19 @@
 
 .theme_dark .header__theme-menu-button_type_dark {
   border: 1px solid var(--header-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: #ff8dcb;
+    --main-font: "IBM Plex mono", "Sans-serif";
+    --font-color: #353430;
+    --heading-font: #353430;
+    --background-color: #fff1f7;
+    --title-color: #ffc2e6;
+    --title-shadow: #ff0070;
+    --link-shadow: #ff8dcb;
+    --header-color: #353430;
+    --cover-image: url(../images/cover-image-dark.png);
+  }
 }

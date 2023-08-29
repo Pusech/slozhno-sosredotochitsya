@@ -18,15 +18,7 @@
   --title-shadow: #ff0070;
   --link-shadow: #ff8dcb;
   --header-color: #353430;
-
-  font-family: var(--main-font);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  z-index: -1;
-  /* background-color: #fff1f7;   variables */
-  background-image: url("/images/cover-image-light.png");
+  --cover-image: url(../images/cover-image-light.png);
 }
 
 .theme_light .header-rec {
@@ -35,4 +27,19 @@
 
 .theme_light .header__theme-menu-button_type_light {
   border: 1px solid var(--header-color);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #ff8dcb;
+    --main-font: "IBM Plex mono", "Sans-serif";
+    --font-color: #353430;
+    --heading-font: #353430;
+    --background-color: #fff1f7;
+    --title-color: #ffc2e6;
+    --title-shadow: #ff0070;
+    --link-shadow: #ff8dcb;
+    --header-color: #353430;
+    --cover-image: url(../images/cover-image-light.png);
+  }
 }
