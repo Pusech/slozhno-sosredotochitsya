@@ -3,8 +3,7 @@
   font-family: var(--main-font-color);
   background-image: var(--cover-image);
   background-size: cover;
-  background-position: center;
-  /* background-repeat: no-repeat; */
+  /* background-position: center; */
   background-attachment: fixed;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
