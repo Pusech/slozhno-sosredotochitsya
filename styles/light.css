@@ -46,4 +46,12 @@
   .header-rec {
     display: none;
   }
+
+  .theme_auto .header__theme-menu-button_type_light {
+    border: 1px solid var(--header-color);
+  }
+
+  .header__theme-menu-button_active {
+    pointer-events: none;
+  }
 }

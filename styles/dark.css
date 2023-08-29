@@ -42,4 +42,12 @@
     --header-color: #ff0070;
     --cover-image: url(../images/cover-image-dark.png);
   }
+
+  .theme_auto .header__theme-menu-button_type_dark {
+    border: 1px solid var(--header-color);
+  }
+
+  .header__theme-menu-button_active {
+    pointer-events: none;
+  }
 }
