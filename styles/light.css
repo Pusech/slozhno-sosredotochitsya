@@ -41,16 +41,6 @@
     --cover-image: url("../images/cover-image-light.png");
   }
 
-  .page {
-    background-color: var(--background-color);
-    font-family: var(--main-font-color);
-    background-image: url("../images/cover-image-light.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-
   .header__decor {
     display: none;
   }
@@ -64,4 +54,6 @@
   }
 }
 
-/* КНОПКА АВТО? */
+/* КНОПКА АВТО ПОДФИКСИТЬ*/
+
+/* ПРОВЕРЬ ФОН БЕЗ FIXED */
