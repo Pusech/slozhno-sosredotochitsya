@@ -41,6 +41,16 @@
     --cover-image: url("../images/cover-image-light.png");
   }
 
+  .theme_auto .page {
+    background-color: var(--background-color);
+    font-family: var(--main-font-color);
+    background-image: var(--cover-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
   .header__decor {
     display: none;
   }
