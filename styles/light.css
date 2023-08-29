@@ -42,4 +42,8 @@
     --header-color: #353430;
     --cover-image: url("../images/cover-image-light.png");
   }
+
+  .header-rec {
+    display: none;
+  }
 }
