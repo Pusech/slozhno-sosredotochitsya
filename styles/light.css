@@ -41,10 +41,10 @@
     --cover-image: url("../images/cover-image-light.png");
   }
 
-  .theme_auto .page {
+  .page {
     background-color: var(--background-color);
     font-family: var(--main-font-color);
-    background-image: var(--cover-image);
+    background-image: url("../images/cover-image-light.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -63,3 +63,5 @@
     pointer-events: none;
   }
 }
+
+/* КНОПКА АВТО? */
