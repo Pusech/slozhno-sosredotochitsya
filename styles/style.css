@@ -7,7 +7,6 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   z-index: -1;
-
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
@@ -17,14 +16,16 @@
   grid-template-rows: 1.33fr 0.33fr 1.33fr;
   align-items: center;
   height: 100vh;
+  min-height: 100vh;
   padding: 10px;
 }
+
 .header::after {
   display: block;
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--header-color);
-  border-left: 1px solid var(--header-color);
+  border-block-end: 1px solid var(--header-color);
+  border-inline-start: 1px solid var(--header-color);
   content: "";
   position: absolute;
   align-self: end;
@@ -35,8 +36,8 @@
   display: block;
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--header-color);
-  border-right: 1px solid var(--header-color);
+  border-block-start: 1px solid var(--header-color);
+  border-inline-end: 1px solid var(--header-color);
   content: "";
   position: absolute;
   align-self: start;
@@ -51,7 +52,7 @@
   position: absolute;
   top: 10px;
   right: 39px;
-  font-size: 18px;
+  font-size: 1.125em;
 }
 
 .header__decor::after {
@@ -64,7 +65,7 @@
   background-color: var(--accent-color);
   border-radius: 10px;
   margin-inline-start: 11px;
-  margin-top: 8px;
+  margin-block-start: 8px;
 }
 
 .header__theme-menu-list {
@@ -79,17 +80,17 @@
   color: var(--header-color);
   text-transform: lowercase;
   font-family: IBM Plex Mono;
-  font-size: 18px;
+  font-size: 1.125em;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 100%;
   padding: 1.5px 13px 4px;
   min-height: 23px;
 }
 
 .header__theme-menu-button:focus-visible {
   outline: none;
-  border-bottom: 1px solid var(--header-color);
+  border-block-end: 1px solid var(--header-color);
 }
 
 .header__theme-menu-button:hover {
@@ -100,6 +101,7 @@
   color: var(--title-color);
   text-shadow: 4px 4px 0px var(--accent-color);
   font-family: IBM Plex Mono;
+  /* Чтобы заголовок в шапке красиво адаптировался  */
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-style: normal;
   font-weight: 700;
@@ -107,16 +109,15 @@
   align-self: center;
 }
 
-/* text_desc */
 .title__decor {
   color: var(--heading-font);
   font-family: var(--main-font);
-  font-size: 18px;
+  font-size: 1.125em;
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px; /* 130% */
   background-color: var(--accent-color);
-  padding-right: 10px;
+  padding-inline-end: 10px;
 }
 
 /* Content */
@@ -125,14 +126,13 @@
   display: grid;
   gap: 50px;
   background-color: var(--background-color);
-  /* нужно адаптировать пиксели */
 }
 
 .content {
   display: grid;
   background-color: var(--background-color);
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
   gap: 20px;
 }
 
@@ -147,41 +147,39 @@
 }
 
 .content:first-child {
-  padding-top: 40px;
+  padding-block-start: 40px;
 }
 
 .content__title {
   color: var(--header-color);
   font-family: var(--main-font);
-  font-size: 18px;
+  font-size: 1.125em;
   font-style: normal;
   font-weight: 700;
-  line-height: 23.4px; /* 130% */
+  line-height: 130%;
 }
 
 .content__desc {
   color: var(--font-color);
   font-family: var(--main-font);
-  font-size: 18px;
+  font-size: 1.125em;
   font-style: normal;
   font-weight: 400;
-  line-height: 23.4px; /* 130% */
+  line-height: 130%;
 }
 
 .advice__desc {
   color: var(--heading-font);
   font-family: var(--main-font);
-  font-size: 18px;
+  font-size: 1.125em;
   font-style: normal;
   font-weight: 400;
-  line-height: 23.4px; /* 130% */
+  line-height: 130%;
   background-color: var(--accent-color);
 }
 
 .advice-title {
-  margin-bottom: 10px;
-  /* ДРУГОЙ ШРИФТ */
-  /* Чегооо *****************************************/
+  margin-block-end: 10px;
 }
 
 a {
@@ -192,7 +190,7 @@ a {
 a:hover {
   text-decoration: none;
   outline: none;
-  border-bottom: 1px solid var(--font-color);
+  border-block-end: 1px solid var(--font-color);
 }
 
 a:focus-visible {
@@ -211,12 +209,12 @@ a:focus-visible {
 .gallery__desc {
   color: var(--heading-font);
   font-family: var(--main-font);
-  font-size: 18px;
+  font-size: 1.125em;
   font-style: normal;
   font-weight: 700;
-  line-height: 23.4px; /* 130% */
+  line-height: 130%;
   background-color: var(--accent-color);
-  padding-right: 10px;
+  padding-inline-end: 10px;
   height: fit-content;
   align-self: end;
 }
@@ -287,6 +285,7 @@ a:focus-visible {
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
   height: 100vh;
+  min-height: 100vh;
   background-color: var(--background-color);
   padding: 10px;
 }
@@ -295,10 +294,10 @@ a:focus-visible {
   color: var(--title-color);
   text-shadow: 2px 2px 0px var(--title-shadow);
   font-family: var(--main-font);
-  font-size: 116px;
+  font-size: 7.25em;
   font-style: normal;
   font-weight: 700;
-  line-height: 82.5%; /* 95.7px */
+  line-height: 82.5%;
   justify-self: center;
   align-self: center;
 }
@@ -307,20 +306,19 @@ a:focus-visible {
   display: block;
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--header-color);
-  border-left: 1px solid var(--header-color);
+  border-block-end: 1px solid var(--header-color);
+  border-inline-start: 1px solid var(--header-color);
   content: "";
   position: absolute;
   align-self: end;
-  /* margin: 10px; */
 }
 
 .footer::before {
   display: block;
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--header-color);
-  border-right: 1px solid var(--header-color);
+  border-block-start: 1px solid var(--header-color);
+  border-inline-end: 1px solid var(--header-color);
   content: "";
   position: absolute;
   align-self: start;
@@ -347,7 +345,7 @@ a:focus-visible {
   }
 
   .cover__title {
-    margin-left: -20px;
+    margin-inline-start: -20px;
   }
 
   .cover__desc {
@@ -364,7 +362,7 @@ a:focus-visible {
     gap: 40px;
   }
   .content:first-child {
-    padding-top: 60px;
+    padding-block-start: 60px;
   }
 
   .content {
@@ -393,6 +391,7 @@ a:focus-visible {
     gap: 20px;
   }
   .footer__title {
+    /* Чтобы заголовок в шапке красиво адаптировался  */
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
@@ -430,6 +429,7 @@ a:focus-visible {
   }
 
   .footer__title {
+    /* Чтобы заголовок в шапке красиво адаптировался  */
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
@@ -457,6 +457,3 @@ a:focus-visible {
     column-gap: 10px;
   }
 }
-
-/* не забудь перенести глобалы, поменять марджины
- на японские, и максимально убрать все пиксели */
