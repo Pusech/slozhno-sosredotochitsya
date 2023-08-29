@@ -21,7 +21,7 @@
   --cover-image: url(../images/cover-image-dark.png);
 }
 
-.theme_dark .header-rec {
+.theme_dark .header__decor {
   display: block;
 }
 

@@ -1,5 +1,3 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   background-color: var(--background-color);
   font-family: var(--main-font);
@@ -46,18 +44,7 @@
   margin: 10px;
 }
 
-/* .decorated-zone::before {
-  display: block;
-  width: 25px;
-  height: 25px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
-  content: "";
-  position: relative;
-  justify-self: end;
-} */
-
-.header-rec {
+.header__decor {
   display: block;
   color: var(--accent-color);
   text-transform: uppercase;
@@ -67,7 +54,7 @@
   font-size: 18px;
 }
 
-.header-rec::after {
+.header__decor::after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -106,7 +93,6 @@
 }
 
 .header__theme-menu-button:hover {
-  /* border: 1px solid white; */
   outline: 1px solid var(--header-color);
 }
 
@@ -131,7 +117,6 @@
   line-height: 23.4px; /* 130% */
   background-color: var(--accent-color);
   padding-right: 10px;
-  /* align-self: end; */
 }
 
 /* Content */
@@ -183,7 +168,7 @@
   line-height: 23.4px; /* 130% */
 }
 
-.section3_desc {
+.advice__desc {
   color: var(--heading-font);
   font-family: var(--main-font);
   font-size: 18px;
@@ -196,6 +181,7 @@
 .advice-title {
   margin-bottom: 10px;
   /* ДРУГОЙ ШРИФТ */
+  /* Чегооо *****************************************/
 }
 
 a {
@@ -205,7 +191,6 @@ a {
 
 a:hover {
   text-decoration: none;
-  /* text-decoration: underline; */
   outline: none;
   border-bottom: 1px solid var(--font-color);
 }
@@ -250,14 +235,12 @@ a:focus-visible {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.7fr 1fr 1fr 0.3fr;
-    /* grid-template-rows: 0.35fr 0.85fr 0.9fr 0.9fr 0.3fr; */
     gap: 20px 20px;
     grid-template-areas:
       "image1 image1 image2"
       "image3 image4 image2"
       "image3 image5 image5"
       "image3 image5 image5";
-    /* grid-auto-flow: dense; */
   }
   .image1 {
     grid-area: image1;
@@ -297,7 +280,7 @@ a:focus-visible {
   object-fit: cover;
 }
 
-/* ФУТЕР ЛАСТ СЛАЙД */
+/* ФУТЕР */
 
 .footer {
   display: grid;
@@ -359,16 +342,15 @@ a:focus-visible {
     margin: 20px;
   }
 
-  .header-rec {
+  .header__decor {
     margin: 10px;
   }
 
   .cover__title {
-    /* font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); */
     margin-left: -20px;
   }
 
-  .cover_desc {
+  .cover__desc {
     align-self: center;
     max-width: 365px;
     justify-self: end;
@@ -438,14 +420,13 @@ a:focus-visible {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
-  .cover_desc {
+  .cover__desc {
     padding: 0;
     max-width: 491px;
   }
 
   .content__title {
     max-width: 365px;
-    /* grid-row: 1 / span 2; */
   }
 
   .footer__title {
@@ -477,28 +458,5 @@ a:focus-visible {
   }
 }
 
-/* @media (prefers-color-scheme: light) {
-  .page {
-    --accent-color: #ff8dcb;
-    --main-font: "IBM Plex mono", "Sans-serif";
-    --font-color: #353430;
-    --heading-font: #353430;
-    --background-color: #fff1f7;
-    --title-color: #ffc2e6;
-    --title-shadow: #ff0070;
-    --link-shadow: #ff8dcb;
-    --header-color: #353430;
-
-    font-family: var(--main-font);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    z-index: -1;
-    background-image: url("/images/cover-image-light.png");
-  }
-
-  .header-rec {
-    display: none;
-  }
-} */
+/* не забудь перенести глобалы, поменять марджины
+ на японские, и максимально убрать все пиксели */

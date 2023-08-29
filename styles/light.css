@@ -21,7 +21,7 @@
   --cover-image: url("../images/cover-image-light.png");
 }
 
-.theme_light .header-rec {
+.theme_light .header__decor {
   display: none;
 }
 
@@ -43,7 +43,7 @@
     --cover-image: url("../images/cover-image-light.png");
   }
 
-  .header-rec {
+  .header__decor {
     display: none;
   }
 
