@@ -1,6 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  background-color: var(--background-color);
   font-family: var(--main-font);
   background-image: var(--cover-image);
   background-size: cover;

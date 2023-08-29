@@ -18,7 +18,7 @@
   --title-shadow: #ff0070;
   --link-shadow: #ff8dcb;
   --header-color: #353430;
-  --cover-image: url("./images/cover-image-light.png");
+  --cover-image: url("../images/cover-image-light.png");
 }
 
 .theme_light .header-rec {
@@ -40,7 +40,7 @@
     --title-shadow: #ff0070;
     --link-shadow: #ff8dcb;
     --header-color: #353430;
-    --cover-image: url("./images/cover-image-light.png");
+    --cover-image: url("../images/cover-image-light.png");
   }
 
   .header-rec {
