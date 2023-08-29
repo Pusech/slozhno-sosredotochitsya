@@ -20,7 +20,7 @@
   --header-color: #ff0070;
 
   font-family: var(--main-font);
-  background-image: url(./images/cover-image-dark.png);
+  background-image: url(../images/cover-image-dark.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

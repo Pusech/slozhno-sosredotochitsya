@@ -2,7 +2,7 @@
 
 .page {
   font-family: var(--main-font);
-  background-image: url(./images/cover-image-dark.png);
+  background-image: url(../images/cover-image-dark.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -499,7 +499,7 @@ a:focus-visible {
     background-attachment: fixed;
     z-index: -1;
     /* background-color: #fff1f7;   variables */
-    background-image: url(/images/cover-image-light.png);
+    background-image: url(../images/cover-image-light.png);
   }
 
   .header-rec {
