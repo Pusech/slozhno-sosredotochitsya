@@ -5,12 +5,11 @@
 
 :root {
   --accent-color: #ff0070;
-  --main-font: "IBM Plex mono", "Sans-serif";
+  --main-font-color: "IBM Plex mono", "Sans-serif";
   --font-color: #f1b2ce;
-  --heading-font: #000028;
+  --heading-font-color: #000028;
   --background-color: #000028;
   --title-color: #db00ff;
-  --title-shadow: #ff0070;
   --link-shadow: #ff0070;
   --header-color: #ff0070;
   --cover-image: url(../images/cover-image-dark.png);

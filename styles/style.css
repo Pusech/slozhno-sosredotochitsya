@@ -1,6 +1,6 @@
 .page {
   background-color: var(--background-color);
-  font-family: var(--main-font);
+  font-family: var(--main-font-color);
   background-image: var(--cover-image);
   background-size: cover;
   background-position: center;
@@ -110,8 +110,8 @@
 }
 
 .title__decor {
-  color: var(--heading-font);
-  font-family: var(--main-font);
+  color: var(--heading-font-color);
+  font-family: var(--main-font-color);
   font-size: 1.125em;
   font-style: normal;
   font-weight: 700;
@@ -152,7 +152,7 @@
 
 .content__title {
   color: var(--header-color);
-  font-family: var(--main-font);
+  font-family: var(--main-font-color);
   font-size: 1.125em;
   font-style: normal;
   font-weight: 700;
@@ -161,7 +161,7 @@
 
 .content__desc {
   color: var(--font-color);
-  font-family: var(--main-font);
+  font-family: var(--main-font-color);
   font-size: 1.125em;
   font-style: normal;
   font-weight: 400;
@@ -169,8 +169,8 @@
 }
 
 .advice__desc {
-  color: var(--heading-font);
-  font-family: var(--main-font);
+  color: var(--heading-font-color);
+  font-family: var(--main-font-color);
   font-size: 1.125em;
   font-style: normal;
   font-weight: 400;
@@ -207,8 +207,8 @@ a:focus-visible {
 }
 
 .gallery__desc {
-  color: var(--heading-font);
-  font-family: var(--main-font);
+  color: var(--heading-font-color);
+  font-family: var(--main-font-color);
   font-size: 1.125em;
   font-style: normal;
   font-weight: 700;
@@ -292,8 +292,8 @@ a:focus-visible {
 
 .footer__title {
   color: var(--title-color);
-  text-shadow: 2px 2px 0px var(--title-shadow);
-  font-family: var(--main-font);
+  text-shadow: 2px 2px 0px var(--accent-color);
+  font-family: var(--main-font-color);
   font-size: 7.25em;
   font-style: normal;
   font-weight: 700;

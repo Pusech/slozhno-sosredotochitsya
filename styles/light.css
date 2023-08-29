@@ -10,12 +10,11 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --accent-color: #ff8dcb;
-  --main-font: "IBM Plex mono", "Sans-serif";
+  --main-font-color: "IBM Plex mono", "Sans-serif";
   --font-color: #353430;
-  --heading-font: #353430;
+  --heading-font-color: #353430;
   --background-color: #fff1f7;
   --title-color: #ffc2e6;
-  --title-shadow: #ff0070;
   --link-shadow: #ff8dcb;
   --header-color: #353430;
   --cover-image: url("../images/cover-image-light.png");
@@ -32,12 +31,11 @@
 @media (prefers-color-scheme: light) {
   :root {
     --accent-color: #ff8dcb;
-    --main-font: "IBM Plex mono", "Sans-serif";
+    --main-font-color: "IBM Plex mono", "Sans-serif";
     --font-color: #353430;
-    --heading-font: #353430;
+    --heading-font-color: #353430;
     --background-color: #fff1f7;
     --title-color: #ffc2e6;
-    --title-shadow: #ff0070;
     --link-shadow: #ff8dcb;
     --header-color: #353430;
     --cover-image: url("../images/cover-image-light.png");
