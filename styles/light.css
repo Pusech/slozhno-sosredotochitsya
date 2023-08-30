@@ -10,13 +10,14 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --accent-color: #ff8dcb;
-  --main-font-color: "IBM Plex mono", "Sans-serif";
+  --main-font-family: "IBM Plex mono", "Sans-serif";
   --font-color: #353430;
   --heading-font-color: #353430;
   --background-color: #fff1f7;
   --title-color: #ffc2e6;
   --link-shadow: #ff8dcb;
   --header-color: #353430;
+  --hover-color: rgba(50, 49, 45, 0.4);
   --cover-image: url("../images/cover-image-light.png");
 }
 
@@ -31,13 +32,14 @@
 @media (prefers-color-scheme: light) {
   :root {
     --accent-color: #ff8dcb;
-    --main-font-color: "IBM Plex mono", "Sans-serif";
+    --main-font-family: "IBM Plex mono", "Sans-serif";
     --font-color: #353430;
     --heading-font-color: #353430;
     --background-color: #fff1f7;
     --title-color: #ffc2e6;
     --link-shadow: #ff8dcb;
     --header-color: #353430;
+    --hover-color: rgba(50, 49, 45, 0.4);
     --cover-image: url("../images/cover-image-light.png");
   }
 
@@ -45,7 +47,7 @@
     display: none;
   }
 
-  .theme_auto .header__theme-menu-button_type_light {
+  .theme_auto .header__theme-menu-button_type_auto {
     border: 1px solid var(--header-color);
   }
 

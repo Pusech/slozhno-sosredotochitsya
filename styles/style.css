@@ -1,15 +1,13 @@
 .page {
-  background-color: var(--background-color);
-  font-family: var(--main-font-color);
+  font-family: var(--main-font-family);
   background-image: var(--cover-image);
-
   background-size: cover;
   background-position: center;
-
   /* При включенном background-attachment: fixed; 
-  автотесты перестают видеть фон и выдают ошибку */
-
+  автотесты перестают видеть фоновое изображение и выдают ошибку */
   background-attachment: fixed;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 /* Шапка + фон и тайтл */
@@ -20,7 +18,7 @@
   grid-template-rows: 1.33fr 0.33fr 1.33fr;
   align-items: center;
   height: 100vh;
-  min-height: 100vh;
+  min-height: 668px;
   padding: 10px;
 }
 
@@ -83,13 +81,19 @@
   border: none;
   color: var(--header-color);
   text-transform: lowercase;
-  font-family: IBM Plex Mono;
+  font-family: var(--main-font-family);
   font-size: 1.125em;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
   padding: 1.5px 13px 4px;
   min-height: 23px;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+  border-block-end: 1px solid var(--header-color);
 }
 
 .header__theme-menu-button:focus-visible {
@@ -98,13 +102,13 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--header-color);
+  outline: 1px solid var(--hover-color);
 }
 
 .cover__title {
   color: var(--title-color);
   text-shadow: 4px 4px 0px var(--accent-color);
-  font-family: IBM Plex Mono;
+  font-family: var(--main-font-family);
   /* Чтобы заголовок в шапке красиво адаптировался  */
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-style: normal;
@@ -115,7 +119,7 @@
 
 .title__decor {
   color: var(--heading-font-color);
-  font-family: var(--main-font-color);
+  font-family: var(--main-font-family);
   font-size: 1.125em;
   font-style: normal;
   font-weight: 700;
@@ -156,7 +160,7 @@
 
 .content__title {
   color: var(--header-color);
-  font-family: var(--main-font-color);
+  font-family: var(--main-font-family);
   font-size: 1.125em;
   font-style: normal;
   font-weight: 700;
@@ -165,7 +169,7 @@
 
 .content__desc {
   color: var(--font-color);
-  font-family: var(--main-font-color);
+  font-family: var(--main-font-family);
   font-size: 1.125em;
   font-style: normal;
   font-weight: 400;
@@ -174,7 +178,7 @@
 
 .advice__desc {
   color: var(--heading-font-color);
-  font-family: var(--main-font-color);
+  font-family: var(--main-font-family);
   font-size: 1.125em;
   font-style: normal;
   font-weight: 400;
@@ -184,22 +188,6 @@
 
 .advice-title {
   margin-block-end: 10px;
-}
-
-a {
-  text-decoration: none;
-  text-shadow: var(--link-shadow) 1px 1px;
-}
-
-a:hover {
-  text-decoration: none;
-  outline: none;
-  border-block-end: 1px solid var(--font-color);
-}
-
-a:focus-visible {
-  outline: none;
-  border: 1px solid var(--font-color);
 }
 
 /* ГАЛЛЕРЕЯ */
@@ -212,7 +200,7 @@ a:focus-visible {
 
 .gallery__desc {
   color: var(--heading-font-color);
-  font-family: var(--main-font-color);
+  font-family: var(--main-font-family);
   font-size: 1.125em;
   font-style: normal;
   font-weight: 700;
@@ -225,7 +213,6 @@ a:focus-visible {
 
 .gallery__images {
   display: grid;
-  grid-template-columns: 1fr;
   grid-column-gap: 0;
   grid-row-gap: 10px;
   padding: 0 0 40px;
@@ -237,9 +224,9 @@ a:focus-visible {
 @media (min-width: 720px) {
   .gallery__images {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.7fr 1fr 1fr 0.3fr;
-    gap: 20px 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+
     grid-template-areas:
       "image1 image1 image2"
       "image3 image4 image2"
@@ -248,39 +235,24 @@ a:focus-visible {
   }
   .image1 {
     grid-area: image1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
   .image2 {
     grid-area: image2;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
   .image3 {
     grid-area: image3;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
   .image4 {
     grid-area: image4;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
   .image5 {
     grid-area: image5;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 }
 
 .gallery-img {
-  max-width: 100%;
-  display: block;
+  block-size: 100%;
+  inline-size: 100%;
   object-fit: cover;
 }
 
@@ -291,7 +263,7 @@ a:focus-visible {
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
   height: 100vh;
-  min-height: 100vh;
+  min-height: 668px;
   background-color: var(--background-color);
   padding: 10px;
 }
@@ -299,7 +271,7 @@ a:focus-visible {
 .footer__title {
   color: var(--title-color);
   text-shadow: 2px 2px 0px var(--accent-color);
-  font-family: var(--main-font-color);
+  font-family: var(--main-font-family);
   font-size: 7.25em;
   font-style: normal;
   font-weight: 700;

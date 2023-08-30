@@ -10,6 +10,7 @@ body {
   min-inline-size: 375px;
   max-inline-size: 1440px;
   margin: 0 auto;
+  background-color: var(--background-color);
 }
 
 h1,
@@ -40,3 +41,26 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
+
+a {
+  text-decoration: none;
+  text-shadow: var(--link-shadow) 1px 1px;
+}
+
+a:hover {
+  text-decoration: none;
+  outline: none;
+  border-block-end: 1px solid var(--font-color);
+}
+
+a:focus {
+  outline: none;
+  border: 1px solid var(--font-color);
+}
+
+a:focus-visible {
+  outline: none;
+  border: 1px solid var(--font-color);
+}
+
+/* хз пересмотри этот момент */
