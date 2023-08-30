@@ -6,8 +6,6 @@
   /* При включенном background-attachment: fixed; 
   автотесты перестают видеть фоновое изображение и выдают ошибку */
   background-attachment: fixed;
-  inline-size: 100%;
-  block-size: 100%;
 }
 
 /* Шапка + фон и тайтл */
