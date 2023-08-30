@@ -6,6 +6,11 @@
   /* При включенном background-attachment: fixed; 
   автотесты перестают видеть фоновое изображение и выдают ошибку */
   background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
 
 /* Шапка + фон и тайтл */
